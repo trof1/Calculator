@@ -1,0 +1,83 @@
+/*  
+    #a6a6a6 СВЕТЛО СЕРЫЙ
+    #333 ТЁМНО СЕРЫЙ
+    #ff9f0b ЖЁЛТЫЙ
+    #fefefe БЕЛЫЙ       */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.screen {
+    width: 300px;
+    height: 500px;
+    margin: 50px auto;
+    padding: 18px;
+    background-color: #000;
+    border-radius: 20px;
+    font-family: arial;
+    color: #ffff;
+    box-shadow: 4px 4px 4px #4f4f4f;
+}
+
+.tablo {
+    height: 125px;
+    padding: 10px;
+    display: grid;
+    justify-items: end;
+    align-items: end;
+    margin-bottom: 25px;
+}
+.tablo p {
+    text-align: right;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.buttons {
+    display: grid;
+    grid-template-areas: 
+    "allclear plus_minus percent divide"
+    "seven eight nine multiply"
+    "four five six minus"
+    "one two three plus"
+    "zero zero dot equal";
+    grid-gap: 7px;
+    justify-items: center;
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.7rem;
+    cursor: pointer;
+    user-select: none;
+    transition-duration: .1s;
+}
+
+.btn.zero {
+    grid-area: zero;
+    width: 100%;
+    border-radius: 34px;
+}
+
+.btn:hover {
+    filter: brightness(120%); 
+}
+.btn:active {
+    filter: brightness(80%);
+}
+
+.btn.bg-grey {
+    background-color: #a6a6a6;
+    color: black;
+}
+.btn.bg-yellow {
+    background-color: #ff9f0b;
+}
